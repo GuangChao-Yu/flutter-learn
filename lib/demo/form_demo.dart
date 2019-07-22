@@ -6,6 +6,10 @@ class FormDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('FormDemo'),
+        elevation: 0.0,
+      ),
       body: Theme(
           data: Theme.of(context).copyWith(primaryColor: Colors.black),
           child: Container(
@@ -34,7 +38,7 @@ class _RegisterFromState extends State<RegisterFrom> {
       registerFromKey.currentState.save();
       debugPrint('username:$username password:$password');
       Scaffold.of(context).showSnackBar(SnackBar(
-        content: Text('正在注册...',style:TextStyle(fontSize: 20.0)),
+        content: Text('正在注册...', style: TextStyle(fontSize: 20.0)),
       ));
     } else {
       setState(() {
