@@ -3,7 +3,6 @@ import './app.dart';
 import './demo/navigator_demo.dart';
 import './demo/form_demo.dart';
 import './demo/material_components.dart';
-import './state/state_management_demo.dart';
 
 void main() => runApp(App());
 
@@ -13,13 +12,12 @@ class App extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         // home: NavigatorDemo(),
-        initialRoute: '/state-management',
+        initialRoute: '/',
         routes: {
           '/': (context) => Home(),
           '/about': (context) => Page(title: 'About'),
           '/form': (context) => FormDemo(),
-          '/mdc':(context)=>MaterialComponents(),
-          '/state-management':(context)=>StateManagmentDemo()
+          '/mdc': (context) => MaterialComponents()
         },
         theme: ThemeData(
           primarySwatch: Colors.yellow,
